@@ -6,14 +6,13 @@ if "." in number_1:
 else:
     number_1 = int(number_1)
 
-operator = input('Please enter an action for the calculator -> ')
-
 number_2 = input('Please enter the second number -> ')
 if "." in number_2:
     number_2 = float(number_2)
 else:
     number_2 = int(number_2)
 
+operator = input('Please enter an action for the calculator -> ')
 
 if operator == "+":
         print(f"{number_1} + {number_2} =", number_1 + number_2)
