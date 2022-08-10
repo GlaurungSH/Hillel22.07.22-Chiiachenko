@@ -55,3 +55,29 @@ while True:
     operator = input('Please enter an action for the calculator -> ')
     if operator == 'exit':
         break
+
+    if operator == "+":
+        result = number_1 + number_2
+
+    elif operator == "-":
+        result = number_1 - number_2
+
+    elif operator == "*":
+        result = number_1 * number_2
+
+    elif operator == "/":
+        try:
+            result = number_1 / number_2
+            result = float(result) if number_1 % number_2 != 0 else int(result)
+        except ZeroDivisionError:
+            print("You can't dividing on zero")
+            sys.exit(0)
+
+    elif operator == "**":
+        result = number_1 ** number_2
+
+    else:
+        print('You have entered an invalid operation character. Restart the program')
+        sys.exit(0)
+
+    print("Result ->", result)
