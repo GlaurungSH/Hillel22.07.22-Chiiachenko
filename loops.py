@@ -1,10 +1,12 @@
 import sys
 
 any_characters = input("Please, enter any characters -> ")
+
 upper = ''
 spaces = ''
 vowels = ''
 numbers = 0
+
 for index, symbol in enumerate(any_characters):
     if symbol.isupper():
         upper += symbol
