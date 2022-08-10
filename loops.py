@@ -1,5 +1,3 @@
-import sys
-
 any_characters = input("Please, enter any characters -> ")
 
 upper = ''
@@ -25,11 +23,12 @@ for index, symbol in enumerate(any_characters):
     else:
         numbers = 0
 
+
 if numbers != 3:
-    print('Correct end of the cycle')
     print('Uppercase characters:', upper)
     print(f'Whitespace indexes -> {spaces}')
     print('Vowels:', vowels)
+    print('Correct end of the cycle')
 
 # Task 2
 
@@ -41,7 +40,7 @@ while True:
         number_1 = float(number_1) if "." in number_1 else int(number_1)
     except ValueError:
         print("You cannot use letters. Please use numbers")
-        sys.exit(0)
+        continue
 
     number_2 = input('Please enter the second number -> ')
     if number_2 == 'exit':
@@ -50,7 +49,7 @@ while True:
         number_2 = float(number_2) if "." in number_2 else int(number_2)
     except ValueError:
         print("You cannot use letters. Please use numbers")
-        sys.exit(0)
+        continue
 
     operator = input('Please enter an action for the calculator -> ')
     if operator == 'exit':
@@ -71,13 +70,13 @@ while True:
             result = float(result) if number_1 % number_2 != 0 else int(result)
         except ZeroDivisionError:
             print("You can't dividing on zero")
-            sys.exit(0)
+            continue
 
     elif operator == "**":
         result = number_1 ** number_2
 
     else:
         print('You have entered an invalid operation character. Restart the program')
-        sys.exit(0)
+        continue
 
     print("Result ->", result)
