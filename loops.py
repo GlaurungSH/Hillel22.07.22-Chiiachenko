@@ -22,13 +22,14 @@ for index, symbol in enumerate(any_characters):
             break
     else:
         numbers = 0
+        print('Correct end of the cycle')
 
+# if numbers != 3:
+print('Uppercase characters:', upper)
+print(f'Whitespace indexes -> {spaces}')
+print('Vowels:', vowels)
+# print('Correct end of the cycle')
 
-if numbers != 3:
-    print('Uppercase characters:', upper)
-    print(f'Whitespace indexes -> {spaces}')
-    print('Vowels:', vowels)
-    print('Correct end of the cycle')
 
 # Task 2
 
