@@ -11,11 +11,11 @@ def sum_range_numbers(start, end):
     else:
         sum_start_end = sum(range(start, end + 1))
     return sum_start_end
-
+#
 print(f'Task_1 - The sum of the range of numbers is -> {sum_range_numbers(start, end)}')
-#
-#
-# # Task 2 - Create a function that displays the number of seconds as days:hours:minutes:seconds
+
+
+# # # Task 2 - Create a function that displays the number of seconds as days:hours:minutes:seconds
 user_seconds = int(input('Please enter number of seconds -> '))
 
 def time(user_seconds):
@@ -30,9 +30,9 @@ def time(user_seconds):
     print(f'Task_2 - Days:Hours:Minutes:Seconds -> {days}d:{hours}h:{minutes}m:{seconds}s')
 
 time(user_seconds)
-#
-#
-# # Task 3.1 - Create a function that calculate the sum of the numbers in the list with a for loop
+
+
+# Task 3.1 - Create a function that calculate the sum of the numbers in the list with a for loop
 while True:
     user_list = list(input('Please enter any number -> '))
 
@@ -49,8 +49,8 @@ while True:
     except ValueError:
         print('Please enter only numbers')
 
-#
-# # Task 3.1 - Second version!
+
+#  Task 3.1 - Second version!
 def sum_numbers_list(list_numbers):
     result = 0
     for number in list_numbers:
@@ -66,11 +66,14 @@ print(f'Task_3.1(2 version) - The sum of numbers in list -> {sum_numbers_list([4
 
 
 # Task 3.2 - Create a function that calculate the sum of the numbers in the list with a while loop
+numbers_list = [12, 44, 12, 776]
+
 def sum_while_cycle(numbers_list):
     result = 0
-    while numbers_list:
+    while True:
         result += sum(numbers_list)
         break
     return result
 
-print(f'Task_3.2 - The sum of numbers in list -> {sum_while_cycle([12, 55, 12, 776])}')
+print(f'Task_3.2 - The sum of numbers in list -> {sum_while_cycle(numbers_list)}')
+
