@@ -14,49 +14,54 @@ print(sum_numbers_list(user_list))
 
 # Task_4 -> Create a function that calculates Fibonacci numbers.
 # # The function accepts the serial number of the sequence number.
+def fibonacci_numbers(number):
+    if number <= 0:
+        print("Please enter only positive integers")
+    elif number == 1:
+        return 0
+    elif number == 2:
+        return 1
+    else:
+        return fibonacci_numbers(number - 1) + fibonacci_numbers(number - 2)
+
+
 try:
     user_number = int(input("Please enter any integer -> "))
-
-
-    def fibonacci_numbers(number):
-        if number <= 0:
-            print("Please enter only positive integers")
-        elif number == 1:
-            return 0
-        elif number == 2:
-            return 1
-        else:
-            return fibonacci_numbers(number - 1) + fibonacci_numbers(number - 2)
-
 
     print(f'Fibonacci number №{user_number} -> {fibonacci_numbers(user_number)}')
 
 except ValueError:
     print('Please enter only integers')
 
-
 # Task_5 -> Print 4 lines: tomato -> meat -> cheese -> bread, conditions:
 # 1) Create 4 functions, each printing its own layer
 # 2) Call only one function
 # 3) Use decorator syntax
-def decorator(argument):
-    def tomato():
-        print('tomato')
-
-    def meat():
-        print('meat')
-
-    def cheese():
-        print('cheese')
-
-    def bread():
-        print('bread')
-
-    return tomato(), meat(), cheese(), bread()
 
 
+def tomato(function):
+    print('tomato')
+    return function
+
+
+def meat(function):
+    print('meat')
+    return function
+
+
+def cheese(function):
+    print('cheese')
+    return function
+
+
+def bread(function):
+    print('bread')
+    return function
+
+
+@bread
+@cheese
+@meat
+@tomato
 def ingredients():
     return None
-
-
-decorator(ingredients())
