@@ -1,3 +1,5 @@
+# Create a function that collects all possible information about the operating system and writes it to the file.
+
 import os
 import json
 
